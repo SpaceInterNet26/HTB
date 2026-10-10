@@ -75,5 +75,64 @@ Network Interface Card (NIC) - hardware component that allows connection to a ne
 Router - forwards data packets between networks and directs internet traffic. reads network address info in data packets to determine their destinations. uses Open Shortest Path First (OSPF) and Border Gateway Protocol (BGP) to find most efficient path for data. 
 A router examines incoming data packets and forwards them to their destinations, based on IP addresses. By connecting multiple networks, it enables devices on different networks to communicate. Manage network traffic by selecting optimal path for data transmission - traffic management . enhance security by having firewalls and access control lists.
 
+Switch - connect multiple devices within the same network. uses MAC addresses to forward data only to the intended recipient.
 
+Network protocols - set of rules of how data is formatted, transmitted, received across a network.
+aspects:
+- Data Segmentation
+-Addressing
+-Routing
+-Error Checking
+-Synchronization
+
+Media Access Control (MAC) address - unique identifier assigned to the Network Interface Card (NIC), allowing it to be recognized on a local network. Used to deliver data frames to the correct physical device.
+Address Resolution Protocol (ARP) - maps IP addresses to MAC addresses, allowing devices to find the MAC address associated with a known IP address in the same network.
+
+Internet Protocol (IP) address - numerical label assigned to each device connected to a network that utilizes IP for communication. 
+Routers use IP addresses to determine the optimal path for data.
+
+Port - a number assigned to specific processes/services on a network to help computers sort traffic.
+Well-Known Ports (0-1023):
+reserved for common and universally recognized services and protocols. (HTTP - 80 ; HTTPS - 443)
+Registered Ports (1024-49151):
+used for external services.
+Dynamic/Private Ports (49152-65535):
+used by client apps to send and receive data from servers.
+
+Dynamic Host Configuration Protocol (DHCP)
+network management protocol used to automate the process of configuring devices on IP networks.
+
+DHCP Server - network device that manages IP address allocation.
+DHCP Client - device that connects to the network and requests network configuration parameters from DHCP server.
+
+How DHCP works:
+1.Discover - device broadcasts a DHCP Discover msg to find available DHCP servers.
+2. Offer - servers respond with DHCP Offer msg, proposing an IP address lease.
+3.Request - client replies with DHCP Request msg, indicating it accepts.
+4.Acknowledge - serve sends DHCP Acknowledge msg, confirming that client has been assigned the IP address.
+
+Domain Name System (DNS)
+provides a domain name for IP address.
+
+DNS  Hierarchy:
+1. Root Servers
+2. Top-Level Domains (TLD's)
+3. Second-Level Domains
+4. Subdomains
+
+DNS Resolution (Domain Translation):
+
+Step 1: domain name typed in browser.
+
+Step 2: pc checks DNS cache.
+
+Step 3: if not found, queries recursive DNS server. Provided by ISP.
+
+Step 4: recursive DNS server contacts root server, which points to TLD name server.
+
+Step 5: TLD name server directs to authoritative name server.
+
+Step 6: authoritative name server responds with IP address.
+
+Step 7: recursive server returns IP address to pc.
 
