@@ -111,6 +111,18 @@ How DHCP works:
 3.Request - client replies with DHCP Request msg, indicating it accepts.
 4.Acknowledge - serve sends DHCP Acknowledge msg, confirming that client has been assigned the IP address.
 
+
+Network Address Translation (NAT)
+allows multiple devices on a private network share a single public IP address.
+Public IP - globally unique
+Private IP - used within LANS.
+
+Types of NAT:
+Static - each private IP corresponds to public IP.
+Dynamic - assigns public IP from a pool of available addresses to a private IP.
+Port Address Translation (PAT) - multiple private IP's share a single public IP.
+
+
 Domain Name System (DNS)
 provides a domain name for IP address.
 
@@ -135,4 +147,172 @@ Step 5: TLD name server directs to authoritative name server.
 Step 6: authoritative name server responds with IP address.
 
 Step 7: recursive server returns IP address to pc.
+
+
+Internet Architecture - describes how data is organized, transmitted and managed across networks.
+
+Peer-to-Peer (P2P) Architecture - each node acts as both a client and a server.
+
+Advantages:
+Scalability - more nodes can increase total resources.
+Resilience - if one node is offline, others still function.
+Cost distribution -  distributed among peers.
+
+Disadvantages:
+management - harder to control and manage.
+potential reliability issues.
+Security challenges.
+
+Client-Server Architecture - clients, which are user devices, send requests and servers respond.
+
+Tiers:
+Single-Tier - client, server and database on the same machine.
+
+Two-Tier - splits application environment into client and server.  client - presentation layer , server - data layer.
+
+Three-Tier - adds a third layer - application server.
+
+N-Tier - multiple levels of application servers.
+
+Advantages:
+Centralized control - easier to manage and update.
+Security - Central security policies can be applied.
+Performance - Dedicated servers can be optimized.
+
+Disadvantages:
+Single point of failure - central server down = clients lose access.
+High cost.
+Network congestion.
+
+Hybrid Architecture - Client-Server and P2P combined.
+
+Advantages:
+Efficiency - relieves workload from server by letting peers share data.
+Control - Central server manages authentication, services.
+
+Disadvantages:
+Implementation - requires sophisticated design.
+Single point of failure.
+
+Cloud Architecture - virtualized client-server model.
+
+SaaS (Software as a service) model - application accessibility without managing underlying hardware.
+ 
+Characteristics:
+1. On-demand self-service
+2. Broad network access
+3. Resource pooling
+4. Rapid elasticity
+5. Measured service
+
+Advantages:
+Scalability.
+Reduced cost.
+Flexibility.
+
+Disadvantages:
+Vendor lock-in.
+Security/Compliance.
+Connectivity.
+
+Software-Defined Networking Architecture (SDN)
+separates control plane from data plane.
+control plane - makes decisions about where traffic is sent.
+data plane - forwards the traffic.
+
+Advantages:
+Centralized control.
+Programmability & Automation.
+Scalability & Efficiency.
+
+Disadvantages:
+Controller vulnerability
+Complex implementation.
+
+
+Wireless Networks
+Communication system, that employs radio waves or other signals allowing devices to connect to the internet, share files and access services. 
+
+Advantages:
+Mobility
+Ease of installation
+Scalability
+
+Disadvantages:
+Security
+Interference
+Speed Limitations
+
+wireless router components:
+WAN, LAN, antennae, processor & memory.
+
+mobile hotspot - uses cellular data.
+
+cell tower - structure to create cellular network cell.
+cell - area of coverage provided by a single cell tower.
+Towers managed by Base Station Controller (BSC).
+
+Macro cells - large towers, extensive coverage.
+Micro/small cells - towers fill coverage gaps left by macro cells.
+
+Frequency bands:
+1. 2.4 GHz - better at penetrating walls, prone to interference.
+2. 5 GHz - faster speeds, shorter range.
+3. Cellular bands - For 4G & 5G. range from lower to mid frequencies.
+
+
+Network Security
+CIA triad:
+- Confidentiality - only authorized user can view info.
+- Integrity - info remains accurate and unaltered.
+- Availability - network resources are accessible when needed.
+
+Firewall
+network security device (software/hardware/both), that monitors incoming and outgoing network traffic.
+
+firewall policies (access control lists) determine whether to allow or block specific traffic.
+
+traffic filtering - firewall operate packets of data according to firewall policies .
+
+1. Packet Filtering firewall
+Layer 3 and 4 of OSI model.
+examines source/destination IP, port and protocol type.
+
+2. Stateful Inspection firewall
+Tracks the state of network connections.
+understand entire convos unlike packet filters.
+
+3. Application Layer firewall (Proxy firewall)
+up to layer 7 of OSI model.
+inspect actual content of traffic and block malicious requests.
+
+4. Next-gen firewall (NGFW)
+stateful inspection with advanced features, intrusion detection/prevention and application control combo.
+
+Intrusion Detection and Prevention Systems (IDS/IPS)
+
+security solutions to monitor and respond to suspicious network or system activity.
+
+IDS - observes traffic, generates alerts but doesnt block.
+IPS - observes traffic, rejects malicious traffic.
+
+Signature-based detection - matches traffic to database of known exploits.
+Anomaly-based detection - detects anything unusual compared to normal activity.
+
+1. Network-based IDS/IPS (NIDS/NIPS)
+hardware/software device placed at strategic points int network to inspect all traffic.
+
+2. Host-based IDS/IPS (HIDS/HIPS)
+runs on individual hosts, monitors inbound/outbound traffic and  system logs for suspicious behavior.
+
+Best practices:
+Define clear policies.
+Regular updates.
+Monitor and log events.
+layered security.
+periodic penetration testing.
+
+localhost/loopback address - allows a device to communicate with itself.
+
+loopback/localhost - internal address that directs network traffic back to the same device. (127.0.0.1)
 
