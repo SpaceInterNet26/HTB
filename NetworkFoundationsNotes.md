@@ -314,5 +314,3 @@ periodic penetration testing.
 
 localhost/loopback address - allows a device to communicate with itself.
 
-loopback/localhost - internal address that directs network traffic back to the same device. (127.0.0.1)
-
